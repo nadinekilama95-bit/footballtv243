@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Football TV 243</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#101a17;color:white;font-family:Arial,sans-serif}
+header{background:#087b48;padding:22px;text-align:center}
+header h1{margin:0;font-size:27px}
+header p{margin:8px 0 0}
+nav{display:flex;flex-wrap:wrap;justify-content:center;background:#17251f}
+nav button{background:none;color:white;border:0;padding:15px;cursor:pointer;font-size:14px}
+nav button:hover{background:#087b48}
+main{max-width:850px;margin:auto;padding:20px}
+h2{color:#42d68b}
+.card{background:#20312a;padding:18px;margin:12px 0;border-radius:12px}
+.score{text-align:center;font-size:23px;font-weight:bold}
+.small{color:#b8c9c0;font-size:13px}
+footer{text-align:center;padding:25px;color:#b8c9c0}
+</style>
+</head>
+<body>
+<header>
+<h1>⚽ FOOTBALL TV 243</h1>
+<p>Le football au cœur de l'actualité !</p>
+</header>
+
+<nav>
+<button onclick="show('home')">Accueil</button>
+<button onclick="show('matches')">Matchs</button>
+<button onclick="show('ranking')">Classements</button>
+<button onclick="show('news')">Actualités</button>
+<button onclick="show('videos')">Vidéos</button>
+</nav>
+
+<main id="content">
+<h2>Bienvenue sur Football TV 243</h2>
+<div class="card">
+<h3>🌍 Toute l'actualité du football</h3>
+<p>Retrouve les matchs, les équipes, les joueurs et les dernières nouvelles du football.</p>
+</div>
+<div class="card">
+<h3>🏆 Notre passion : le football</h3>
+<p>Bienvenue dans ta nouvelle application Football TV 243 !</p>
+</div>
+</main>
+
+<footer>© 2026 Football TV 243</footer>
+
+<script>
+function show(page){
+let content=document.getElementById('content');
+if(page==='home'){
+content.innerHTML='<h2>Bienvenue sur Football TV 243</h2><div class="card"><h3>🌍 Toute l’actualité du football</h3><p>Retrouve les matchs, les équipes, les joueurs et les dernières nouvelles.</p></div>';
+}
+if(page==='matches'){
+content.innerHTML='<h2>⚽ Matchs</h2><div class="card"><p>Les résultats et calendriers seront affichés ici.</p><p class="small">Les données des matchs en direct ne sont pas encore connectées.</p></div>';
+}
+if(page==='ranking'){
+content.innerHTML='<h2>🏆 Classements</h2><div class="card"><p>Les classements des championnats seront affichés ici.</p></div>';
+}
+if(page==='news'){
+content.innerHTML='<h2>📰 Actualités</h2><div class="card"><p>Les nouvelles du football seront publiées ici.</p></div>';
+}
+if(page==='videos'){
+content.innerHTML='<h2>🎬 Vidéos</h2><div class="card"><p>Retrouve ici les vidéos de Football TV 243.</p></div>';
+}
+}
+</script>
+</body>
+</html>
